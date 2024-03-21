@@ -24,12 +24,38 @@
     text-align: justify;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'local-1', monospace, sans-serif;
-}
-
 body {
     font-family: 'local-2', monospace, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'local-1', monospace, sans-serif;
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 10px;
+    padding: 10px;
+}
+
+ul li::marker {
+    content: "➢"; /* ✶✵✥  ➽➼ ❖*/
+    font-weight: bolder;
+}
+
+a {
+    text-decoration: none;
+    color: var(--pitch-black);
+    transition: 0.3s ease-in-out;
+}
+a:hover {
+    color: var(--pure-white);
+    text-shadow: 0 0 2px var(--pitch-black);
+    transition: 0.3s ease-in-out;
 }
 
 /* ---------- header ---------- */
@@ -39,7 +65,7 @@ header {
     position: sticky;
     top: 0;
     padding: 10px;
-    box-shadow: 0 0 10px 10px var(--pitch-black);
+    box-shadow: 0 0 2px 2px var(--pitch-black);
     z-index: 1;
 }
 
@@ -67,7 +93,7 @@ header {
 
 .icons8-sun:hover {
     cursor: pointer;
-    filter: invert(0%) drop-shadow(0 0 10px var(--pure-white));
+    filter: invert(0%) drop-shadow(0 0 2px var(--pure-white));
     transition: 0.5s ease-in-out;
 }
 
@@ -85,7 +111,7 @@ main {
     margin: 10px;
     border: 1px solid var(--pitch-black);
     border-radius: 100%;
-    box-shadow: 0 0 1px 1px var(--pitch-black);
+    box-shadow: 0 0 2px 2px var(--pitch-black);
     transition: 1s ease-in-out;
 }
 
@@ -115,7 +141,7 @@ footer {
 }
 
 .social-icons a:hover {
-    filter: drop-shadow(0 0 10px var(--pure-white)) invert(100%);
+    filter: drop-shadow(0 0 2px var(--pure-white)) invert(100%);
     transition: 0.5s;
 }
     
