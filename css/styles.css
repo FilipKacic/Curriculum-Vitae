@@ -4,6 +4,7 @@
     --pure-white: white;
 
     --transparent-dark: rgba(0, 0, 0, 0.9);
+    --transparent-light: rgba(255, 255, 255, 0.3);
 
     --shadow: 2px;
     --space: 10px;
@@ -32,65 +33,38 @@
     padding: 0;
     box-sizing: border-box;
     text-align: justify;
+    /* filter: invert(100%); */
 }
 
 body {
     font-family: 'local-2', monospace, sans-serif;
+    scroll-behavior: smooth;    
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'local-1', monospace, sans-serif;
-    margin: calc(var(--space)*2) 0 var(--space) 0;
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    margin: var(--space) var(--space) var(--space) calc(var(--space)*2);
-    padding-left: var(--space);
-}
-
-ul li::marker {
-    content: "➳";
-    font-weight: bolder;
-}
-
-a {
-    text-decoration: none;
-    color: var(--pitch-black);
-    transition: var(--blink) ease-in-out;
-}
-a:hover {
-    text-shadow: 0 0 var(--shadow) var(--pitch-black);
-    transition: var(--blink) ease-in-out;
 }
 
 /* ---------- header ---------- */
 header {
-    background-color: var(--transparent-dark);
-    color: var(--pure-white);;
-    position: sticky;
-    top: 0;
-    padding: var(--space);
-    box-shadow: 0 0 var(--shadow) var(--shadow) var(--transparent-dark);
-    z-index: 1;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-header h1 {
-    margin: var(--shadow) 0 0 calc(var(--icon) + var(--shadow));
+    justify-content: space-betweeN;
+    align-items: center;
+    background-color: var(--transparent-dark);
+    color: var(--pure-white);
+    position: sticky;
+    top: 0;
+    padding: calc(var(--space) + var(--shadow)) var(--space) var(--space);
+    box-shadow: 0 0 var(--shadow) var(--shadow) var(--transparent-dark);
+    z-index: 1;
 }
 
 .dropdown-menu-button {
     display: inline-block;
     width: var(--icon);
     height: var(--icon);
-    filter: invert(100%);
-    margin: var(--shadow) var(--shadow) 0 0;
+    filter: invert(100%);   
     transition: var(--heartbeat) ease-in-out;
     flex-shrink: 0;
 }
@@ -101,36 +75,60 @@ header h1 {
     transition: var(--heartbeat) ease-in-out;
 }
 
+.dropdown-menu-button.active {
+    filter: invert(100%) drop-shadow(0 0 calc(var(--shadow) * 2) var(--pure-white));
+    transition: var(--heartbeat) ease-in-out;
+}
+
+.dropdown-menu-button.active:hover {
+    filter: invert(100%) drop-shadow(0 0 calc(var(--shadow) * 4) var(--pure-white));
+    transition: var(--heartbeat) ease-in-out;
+}
+
 /* ----- dropdown menu ----- */
+.dropdown-container {
+    position: relative;
+}
+
 .dropdown-menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    top: calc(100% + var(--space) * 2);
+    right: 0;
     background-color: var(--transparent-dark);
     box-shadow: 0 0 var(--shadow) var(--shadow) var(--transparent-dark);
     z-index: 1;
-    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility var(--heartbeat) ease-in-out, opacity var(--heartbeat) ease-in-out;  
 }
-
 
 .dropdown-menu a {
-    display: block;
-    padding: var(--space);
-    text-decoration: none;
-    text-align: center;
+    display: flex;  
+    justify-content: center;
     color: var(--pure-white);
+    padding: calc(var(--icon) / 2);
+    text-decoration: none;
+    transition: background-color var(--blink) ease-in-out, text-shadow var(--blink) ease-in-out;
 }
 
-.dropdown-menu a:hover {
-    filter: drop-shadow(0 0 var(--shadow) var(--pure-white));
+.dropdown-menu a:hover, .currentSection {
+    background-color: var(--transparent-dark);
+    text-shadow: 0 0 var(--shadow) var(--pure-white);
+    transition: background-color var(--heartbeat) ease-in-out, text-shadow var(--heartbeat) ease-in-out;
 }
 
-.dropdown-container:hover .dropdown-menu {
-    display: block;
+.show {
+    visibility: visible;
+    opacity: 1;
 }
 
 
 /* ---------- main ---------- */
 main {
+    color: var(--pitch-black);
+    background-color: var(--pure-white) ;
     padding: calc(var(--space)*2) var(--space) var(--space) var(--space);
     display: flex;
     flex-direction: column;
@@ -158,8 +156,40 @@ main {
     }
 }
 
+main h1, h2, h3, h4, h5, h6 {
+    margin: calc(var(--space)*2) 0 var(--space) 0;
+}
+
+main ul {
+    list-style: none;
+}
+main ul li {
+    margin: var(--space) var(--space) var(--space) calc(var(--space)*2);
+    padding-left: var(--space);
+}
+main ul li::marker {
+    content: "➳";
+    font-weight: bolder;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--pitch-black);
+    transition: var(--blink) ease-in-out;
+}
+main a:hover {
+    text-shadow: 0 0 var(--shadow) var(--pitch-black);
+    transition: var(--blink) ease-in-out;
+}
+
 /* ---------- footer ---------- */
 footer {
+    padding: var(--space);
+}
+
+.my-name {
+    text-align: center;
+    color: var(--balanced-gray);
     padding: var(--space);
 }
 
@@ -168,16 +198,13 @@ footer {
     justify-content: center;
     
 }
-
 .social-icons a {
     margin-right: var(--space);
     transition: var(--heartbeat);
 }
-
 .social-icons a:last-child {
     margin-right: 0;
 }
-
 .social-icons a:hover {
     filter: drop-shadow(0 0 var(--shadow) var(--pure-white)) invert(100%);
     transition: var(--heartbeat);
@@ -215,16 +242,13 @@ footer {
     background-size: 100%;
 }
 
-.my-name {
-    text-align: center;
-    color: var(--balanced-gray);
-    padding: var(--space);
-}
-
-::selection {
+::selection {   
     background-color: var(--pitch-black);
     color: var(--pure-white);
 }
 
 @media only screen and (max-width: 821px) {
+    :root {
+        --space: 10px;
+    }   
 }
