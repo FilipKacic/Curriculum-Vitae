@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';"> -->
     <title>Filip Kačić's CV</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
@@ -13,10 +13,11 @@
     <header>
         <h1>Curriculum Vitae</h1>
         <div class="dropdown-container">
-            <img src="/img/icons/menu.svg" alt="menu" class="dropdown-menu-button">
+            <img src="/images/icons/google/menu.svg" alt="menu" class="dropdown-menu-button">
             <div class="dropdown-menu">
-                <a href="#pro">Projects</a>
-                <a href="#ski">Skills</a>
+                <a href="#con">Contact</a>
+                <a href="#ski">Skillset</a>
+                <a href="#pro">Work Experience</a>
                 <a href="#edu">Education</a>
                 <a href="#bio">Biography</a>
             </div>
@@ -24,20 +25,33 @@
     </header>
     <main>
         <div id="monolith">
-            <div id="portrait">
-                <img src="img/face.jpg" alt="face">
+            <div id="page-0">
+                <div class="portrait">
+                    <img src="images/face.jpg" alt="face">
+                </div>
             </div>
-            <div id="pro">
-                <h2>Projects</h2>
-                <p>Web applications: </p>
-                <p>Mobile applications: Pythagorean Tuner, Palette Saver, Platonic Dice Roller</p>
-                <p>Video games: Oathbreaker I</p>
-                <p>Board games: Hunter's Gamble, Phantasy Potions, Celecast Cards</p>
-                <p>Books: Game Design Princples</p>
-                <p>Essays: Randomness & Divination in Christian Moral System</p>
-            </div>
+            <div id="con">
+                <h2>Contact</h2>
+                <div class="social-icons">
+                    E-mail:
+                    <a href="mailto:filipkacic@protonmail.com">
+                        <img src="images/icons/icons8/protonmail.svg" class="social-icon">
+                    </a>,
+                    LinkedIn:
+                    <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer">
+                        <img src="images/icons/icons8/linkedin.svg" class="social-icon">
+                    </a>,
+                    GitHub:
+                    <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer">
+                        <img src="images/icons/icons8/github.svg" class="social-icon">
+                    </a>,
+                    Telegram:
+                    <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer">
+                        <img src="images/icons/icons8/telegram.svg" class="social-icon">
+                    </a>
+                </div>
             <div id="ski">
-                <h2 >Skills</h2>
+                <h2>Skills</h2>
                 <ul>
                     <li>Logical thinking and problem-solving skills, work discipline</li>
                     <li>Project and time management, people skills, advanced english</li>
@@ -53,6 +67,15 @@
                     <li>Willingness to learn more</li>
                 </ul>
             </div>
+            <div id="pro">
+                <h2>Projects</h2>
+                <p>Web applications: </p>
+                <p>Mobile applications: Pythagorean Tuner, Palette Saver, Platonic Dice Roller</p>
+                <p>Video games: Oathbreaker I</p>
+                <p>Board games: Hunter's Gamble, Phantasy Potions, Celecast Cards</p>
+                <p>Books: Game Design Princples</p>
+                <p>Essays: Randomness & Divination in Christian Moral System</p>
+            </div>
             <div id="edu">
                 <h2>Education</h2>
                 <ol>
@@ -63,24 +86,24 @@
             </div>
             <div id="bio">
                 <h2>Biography</h2>
-                <p><sub><img src="img/icons/fort.svg"></sub>Birth place: Dubrovnik, Croatia</p>
-                <p><sub><img src="img/icons/factory.svg"></sub>Dwelling place: Rijeka, Croatia</p>
+                <p><sub><img src="/images/icons/google/fort.svg"></sub>Birth place: Dubrovnik, Croatia</p>
+                <p><sub><img src="/images/icons/google/factory.svg"></sub>Dwelling place: Rijeka, Croatia</p>
             </div>
         </div>
     </main>
     <footer>
-        <div id="social-icons">
+        <div class="social-icons">
             <a href="mailto:filipkacic@protonmail.com">
-                <div id="icons8-protonmail"></div> <!-- Proton Mail -->
+                <img src="images/icons/icons8/protonmail.svg" class="social-icon">
             </a>
-            <a href="https://t.me/filipkacic" target="_blank" rel="noopener noreferrer">
-                <div id="icons8-linkedin"></div> <!-- LinkedIn -->
+            <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer">
+                <img src="images/icons/icons8/linkedin.svg" class="social-icon">
             </a>
             <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer">
-                <div id="icons8-github"></div> <!-- GitHub -->
+                <img src="images/icons/icons8/github.svg" class="social-icon">
             </a>
-            <a href="https://t.me/filipkacic" target="_blank" rel="noopener noreferrer">
-                <div id="icons8-telegram"></div> <!-- Telegram -->
+            <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer">
+                <img src="images/icons/icons8/telegram.svg" class="social-icon">
             </a>
         </div>
         <div id="signature">Filip Kačić</div>
