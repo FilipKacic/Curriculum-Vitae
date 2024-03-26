@@ -36,7 +36,6 @@
     text-align: justify;
     /* filter: invert(100%); */
 }
-
 body {
     display: flex;
     flex-direction: column;
@@ -47,9 +46,11 @@ body {
     overflow-x: hidden;
     /* cursor: url('/images/custom-cursor.svg'), auto; */
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'local-1', monospace, sans-serif;
+}
+h3 {
+    text-align: center;
 }
 
 /* ---------- header ---------- */
@@ -82,18 +83,15 @@ header {
     transition: var(--heartbeat) ease-in-out;
     flex-shrink: 0;
 }
-
 .dropdown-menu-button:hover {
     cursor: pointer;
     filter: invert(100%) drop-shadow(0 0 var(--shadow) var(--pure-white));
     transition: var(--heartbeat) ease-in-out;
 }
-
 .dropdown-menu-button.active {
     filter: invert(100%) drop-shadow(0 0 calc(var(--shadow) * 2) var(--pure-white));
     transition: var(--heartbeat) ease-in-out;
 }
-
 .dropdown-menu-button.active:hover {
     filter: invert(100%) drop-shadow(0 0 calc(var(--shadow) * 4) var(--pure-white));
     transition: var(--heartbeat) ease-in-out;
@@ -103,7 +101,6 @@ header {
 .dropdown-container {
     position: relative;
 }
-
 .dropdown-menu {
     display: flex;
     flex-direction: column;
@@ -117,7 +114,6 @@ header {
     opacity: 0;
     transition: visibility var(--heartbeat) ease-in-out, opacity var(--heartbeat) ease-in-out;  
 }
-
 .dropdown-menu a {
     display: flex;  
     justify-content: center;
@@ -127,14 +123,12 @@ header {
     text-align: center;
     transition: background-color var(--heartbeat) ease-in-out, text-shadow var(--heartbeat) ease-in-out
 }
-
 .dropdown-menu a:hover,
 .currentSection {
     background-color:var(--dark-gray);
     text-shadow: 0 0 var(--shadow) var(--pure-white);
     transition: background-color var(--heartbeat) ease-in-out, text-shadow var(--heartbeat) ease-in-out;
 }
-
 .show {
     visibility: visible;
     opacity: 1;
@@ -148,23 +142,19 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
 #monolith {
     padding: calc(var(--space)*2) var(--space);
     max-width: 100vw;
 }
-
 main h1, h2, h3, h4, h5, h6 {
     margin: calc(var(--space) * 2) 0 var(--space) 0;
     color: inherit;
     background-color: inherit;
 }
-
 main p {
     margin: var(--space) 0;
     color: var(--pitch-black);
 }
-
 main a {
     text-decoration: none;
     color: inherit;
@@ -177,8 +167,7 @@ main a:hover {
     font-weight: bold;
     transition: color var(--blink) ease-in-out, text-shadow var(--blink) ease-in-out, font-weight var(--blink) ease-in-out;
 }
-
-#page-0, #con, #ski, #pro, #edu, #bio {
+#page-0, #con, #pro, #ski, #edu, #bio {
     display: flex;
     flex-direction: column;
 }
@@ -187,11 +176,9 @@ main a:hover {
 #page-0 {
     align-items: center;
 }
-
 #page-0 h2 {
     align-self: baseline;
 }
-
 .portrait img {
     align-self: center;
     height: calc(var(--collosal)/2);
@@ -204,7 +191,6 @@ main a:hover {
     animation-duration: var(--breath);
     animation-iteration-count: infinite;
 }
-
 @keyframes hueRotateLoop {
     0% {
         filter: hue-rotate(0deg);
@@ -212,22 +198,6 @@ main a:hover {
     100% {
         filter: hue-rotate(360deg);
     }
-}
-
-/* ----- skills ----- */
-#ski ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
-}
-#ski ul li {
-    margin: var(--space) 0 var(--space) calc(var(--space)*2);
-    padding-left: var(--space);
-}
-#ski ul li::marker {
-    content: "➳";
-    font-weight: bold;
 }
 
 /* ----- projects ----- */
@@ -254,8 +224,8 @@ main a:hover {
     padding: var(--space);
     color: inherit;
     text-shadow: 0 0 var(--shadow) var(--shadow) var(--pitch-black);
+    background-color: gainsboro;
 }
-
 .project-1 {
     background-image: ;
 }
@@ -267,6 +237,22 @@ main a:hover {
 }
 .project-4 {
     background-image: ;
+}
+
+/* ----- skillset ----- */
+#ski ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+#ski ul li {
+    margin: var(--space) 0 var(--space) calc(var(--space)*2);
+    padding-left: var(--space);
+}
+#ski ul li::marker {
+    content: "➳";
+    font-weight: bold;
 }
 
 /* ----- education ----- */
@@ -300,33 +286,28 @@ footer {
     padding: var(--space);
     background-color: inherit;
 }
-
 #signature {
     text-align: center;
     color: var(--dark-gray);
     padding: var(--space);
 }
-
 .social-icons {
     display: flex;
     align-items: center;
     text-wrap: nowrap;
     flex-wrap: wrap;
 }
-
 .social-icons .social-icon {
     margin: 0 var(--space);
     transition: filter var(--heartbeat), transform var(--heartbeat);
 }
-
 .social-icons .social-icon:hover {
     filter: drop-shadow(0 0 var(--shadow) var(--pure-white)) invert(100%);
     transform: scale(1.2);
     transition: filter var(--heartbeat), transform var(--heartbeat);
 }
 
-/* - spice - */
-
+/* - spices - */
 ::-webkit-scrollbar {
     width: var(--space);
 }
@@ -342,12 +323,10 @@ footer {
 ::-webkit-scrollbar-corner {
     background-color: transparent;
 }
-
 ::selection {
     color: yellow;
     background-color: blue;
 }
-
 .fadeIn {
     animation-name: fadeIn;   
 }
@@ -357,7 +336,6 @@ footer {
 .fast {
     animation-duration: var(--heartbeat);
 }
-
 @keyframes fadeIn {
     from{
         opacity: 0;
@@ -366,7 +344,6 @@ footer {
         opacity: 1;
     }
 }
-
 @media only screen and (max-width: 821px) {
     :root {
         --collosal: calc(100vw - var(--space) * 3);
