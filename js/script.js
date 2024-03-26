@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const icon = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--icon'));
         const space = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--space'));
         const dropdownMenu = document.querySelector('.dropdown-menu');
-        dropdownMenu.style.top = `calc(${headerHeight}px - ${icon} + ${space} + ${space})`;
+        dropdownMenu.style.top = `calc(${headerHeight}px + ${space}`;
     }
     setDropdownMenuTop();
 

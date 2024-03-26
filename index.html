@@ -6,24 +6,26 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';"> -->
     <title>Filip Kačić's CV</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <script src="/js/script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Curriculum Vitae</h1>
+    <header class="fadeIn slow">
+        <div class="header-title">
+            <h1>Curriculum Vitae</h1>
+        </div>
         <div class="dropdown-container">
             <img src="/images/icons/google/menu.svg" alt="menu" class="dropdown-menu-button">
             <div class="dropdown-menu">
                 <a href="#con">Contact</a>
                 <a href="#ski">Skillset</a>
-                <a href="#pro">Work Experience</a>
+                <a href="#pro">Projects</a>
                 <a href="#edu">Education</a>
                 <a href="#bio">Biography</a>
             </div>
         </div>
     </header>
-    <main>
+    <main class="fadeIn fast">
         <div id="monolith">
             <div id="page-0">
                 <div class="portrait">
@@ -50,6 +52,7 @@
                         <img src="images/icons/icons8/telegram.svg" class="social-icon">
                     </a>
                 </div>
+            </div>
             <div id="ski">
                 <h2>Skills</h2>
                 <ul>
@@ -69,29 +72,32 @@
             </div>
             <div id="pro">
                 <h2>Projects</h2>
-                <p>Web applications: </p>
-                <p>Mobile applications: Pythagorean Tuner, Palette Saver, Platonic Dice Roller</p>
-                <p>Video games: Oathbreaker I</p>
-                <p>Board games: Hunter's Gamble, Phantasy Potions, Celecast Cards</p>
-                <p>Books: Game Design Princples</p>
-                <p>Essays: Randomness & Divination in Christian Moral System</p>
+                <div class="projects">
+                    <div class="project project-1"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Web applications: Knowledge Hoard</a></div>
+                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Mobile applications: Pythagorean Tuner, Platonic Dice Roller</a></div>
+                    <div class="project project-3"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Video games: Oathbreaker I</a></div>
+                    <div class="project project-4"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Board games: Hunter's Gamble, Celecast Cards</a></div>
+                    <div class="project project-1"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Books: Game Design Princples</a></div>
+                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Essays: Randomness & Divination</a></div>
+                </div>
+                <p>...</p>
             </div>
             <div id="edu">
                 <h2>Education</h2>
                 <ol>
-                    <li><a href="https://www.inf.uniri.hr/" target="_blank" rel="noopener noreferrer">University of Rijeka, Faculty of Informatics and Digital Technologies</a><br>(bachelor's degree in computer science)</li>
+                    <li><a href="https://www.inf.uniri.hr/" target="_blank" rel="noopener noreferrer">University of Rijeka, Faculty of Informatics and Digital Technologies</a><br><i>(bachelor's degree in computer science)</i></li>
                     <li><a href="http://gimnazija-amohorovicica-ri.skole.hr/" target="_blank" rel="noopener noreferrer">Gymnasium of Andrija Mohorovičić</a></li>
                     <li><a href="http://os-brajda-ri.skole.hr/" target="_blank" rel="noopener noreferrer">Elementary School "Brajda"</a></li>
                 </ol>
             </div>
             <div id="bio">
                 <h2>Biography</h2>
-                <p><sub><img src="/images/icons/google/fort.svg"></sub>Birth place: Dubrovnik, Croatia</p>
                 <p><sub><img src="/images/icons/google/factory.svg"></sub>Dwelling place: Rijeka, Croatia</p>
+                <p><sub><img src="/images/icons/google/fort.svg"></sub>Birth place: Dubrovnik, Croatia</p>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="fadeIn fast">
         <div class="social-icons">
             <a href="mailto:filipkacic@protonmail.com">
                 <img src="images/icons/icons8/protonmail.svg" class="social-icon">

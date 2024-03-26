@@ -1,16 +1,17 @@
 :root {
     /* color palette */
     --pitch-black: black;
-    --balanced-gray: gray;
+    --dark-gray: rgb(16, 16, 16);
     --pure-white: white;
 
     /* custom sizes */
     --shadow: 2px;
-    --space: 10px;
+    --space: 8px;
     --icon: 50px;
+    --collosal: calc(100vw / 2 - var(--space) * 3);
 
     /* right timings */
-    --blink: 0.1s;
+    --blink: 0.3s;
     --heartbeat: 0.5s;
     --breath: 6s;
 }   
@@ -37,11 +38,14 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'local-2', monospace, sans-serif;
     scroll-behavior: smooth;
     color: var(--pitch-black);
     background-color: var(--pure-white);
     overflow-x: hidden;
+    /* cursor: url('/images/custom-cursor.svg'), auto; */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,14 +57,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
     color: var(--pure-white);
-    background-color: var(--pitch-black);
+    background-image: linear-gradient(to bottom, var(--dark-gray), var(--pitch-black));
     position: sticky;
     top: 0;
     padding: calc(var(--space) + var(--shadow)) var(--space) var(--space);
     box-shadow: 0 0 var(--shadow) var(--shadow) var(--pitch-black);
     z-index: 1;
     opacity: 0.9;
+    min-width: max-content;
 }
 
 .header-title {
@@ -102,8 +108,8 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: calc(100% + var(--space) * 2);
-    right: 0;
+    top: calc(var(--icon) + var(--space) * 3);
+    right: var(--shadow);
     background-color: var(--pitch-black);
     box-shadow: 0 0 var(--shadow) var(--shadow) var(--pitch-black);
     z-index: 1;
@@ -115,17 +121,16 @@ header {
 .dropdown-menu a {
     display: flex;  
     justify-content: center;
-    color: inherit;
-    background-color: inherit;
+    color: var(--pure-white);
     padding: calc(var(--icon) / 2);
     text-decoration: none;
     text-align: center;
-    transition: background-color var(--blink) ease-in-out, text-shadow var(--blink) ease-in-out;
+    transition: background-color var(--heartbeat) ease-in-out, text-shadow var(--heartbeat) ease-in-out
 }
 
 .dropdown-menu a:hover,
 .currentSection {
-    background-color: var(--balanced-gray);
+    background-color:var(--dark-gray);
     text-shadow: 0 0 var(--shadow) var(--pure-white);
     transition: background-color var(--heartbeat) ease-in-out, text-shadow var(--heartbeat) ease-in-out;
 }
@@ -146,6 +151,31 @@ main {
 
 #monolith {
     padding: calc(var(--space)*2) var(--space);
+    max-width: 100vw;
+}
+
+main h1, h2, h3, h4, h5, h6 {
+    margin: calc(var(--space) * 2) 0 var(--space) 0;
+    color: inherit;
+    background-color: inherit;
+}
+
+main p {
+    margin: var(--space) 0;
+    color: var(--pitch-black);
+}
+
+main a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--blink) ease-in-out, text-shadow var(--blink) ease-in-out, font-weight var(--blink) ease-in-out;
+    text-shadow: 0 0 var(--shadow) var(--pitch-black);
+}
+main a:hover {
+    color: var(--pure-white);
+    text-shadow: 0 0 var(--shadow) var(--pitch-black);
+    font-weight: bold;
+    transition: color var(--blink) ease-in-out, text-shadow var(--blink) ease-in-out, font-weight var(--blink) ease-in-out;
 }
 
 #page-0, #con, #ski, #pro, #edu, #bio {
@@ -164,8 +194,8 @@ main {
 
 .portrait img {
     align-self: center;
-    height: calc(var(--icon)*5);
-    width: calc(var(--icon)*5);
+    height: calc(var(--collosal)/2);
+    width: calc(var(--collosal)/2);
     margin: var(--space);
     border: var(--shadow) solid var(--pitch-black);
     /* border-radius: 100%; */
@@ -173,12 +203,6 @@ main {
     animation-name: hueRotateLoop;
     animation-duration: var(--breath);
     animation-iteration-count: infinite;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
 }
 
 @keyframes hueRotateLoop {
@@ -190,28 +214,7 @@ main {
     }
 }
 
-main h1, h2, h3, h4, h5, h6 {
-    margin: calc(var(--space) * 2) 0 var(--space) 0;
-    color: inherit;
-    background-color: inherit;
-}
-
-main p {
-    margin: var(--space) 0;
-    color: var(--pitch-black);
-}
-
-main a {
-    text-decoration: none;
-    color: inherit;
-    transition: var(--blink) ease-in-out;
-}
-main a:hover {
-    text-shadow: 0 0 var(--shadow) var(--pitch-black);
-    transition: var(--blink) ease-in-out;
-}
-
-/* ----- skills -----*/
+/* ----- skills ----- */
 #ski ul {
     display: flex;
     flex-direction: column;
@@ -225,6 +228,45 @@ main a:hover {
 #ski ul li::marker {
     content: "➳";
     font-weight: bold;
+}
+
+/* ----- projects ----- */
+#pro {
+
+}
+.projects {
+    display: grid;
+    grid-template-rows: repeat(2, calc(var(--collosal)/2));
+    grid-template-columns: repeat(2, var(--collosal));
+    grid-auto-flow: row;
+    grid-auto-rows: calc(var(--collosal)/2);
+    grid-gap: var(--space);
+    margin: var(--space);
+    align-self: center;
+}
+.project {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 var(--shadow) var(--pitch-black);
+    padding: var(--space);
+    color: inherit;
+    text-shadow: 0 0 var(--shadow) var(--shadow) var(--pitch-black);
+}
+
+.project-1 {
+    background-image: ;
+}
+.project-2 {
+    background-image: ;
+}
+.project-3 {
+    background-image: ;
+}
+.project-4 {
+    background-image: ;
 }
 
 /* ----- education ----- */
@@ -261,24 +303,29 @@ footer {
 
 #signature {
     text-align: center;
-    color: var(--balanced-gray);
+    color: var(--dark-gray);
     padding: var(--space);
 }
 
 .social-icons {
     display: flex;
     align-items: center;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .social-icons .social-icon {
-    transition: filter var(--heartbeat);
     margin: 0 var(--space);
+    transition: filter var(--heartbeat), transform var(--heartbeat);
 }
 
 .social-icons .social-icon:hover {
     filter: drop-shadow(0 0 var(--shadow) var(--pure-white)) invert(100%);
-    transition: filter var(--heartbeat);
+    transform: scale(1.2);
+    transition: filter var(--heartbeat), transform var(--heartbeat);
 }
+
+/* - spice - */
 
 ::-webkit-scrollbar {
     width: var(--space);
@@ -286,6 +333,8 @@ footer {
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(to top, var(--pitch-black), var(--pure-white), var(--pitch-black));
     box-shadow: inset 0 0 var(--shadow) var(--pitch-black);
+    cursor: move;
+    column-rule-color: aqua;
 }
 ::-webkit-scrollbar-track {
     background-color: var(--pitch-black);
@@ -299,7 +348,37 @@ footer {
     background-color: blue;
 }
 
+.fadeIn {
+    animation-name: fadeIn;   
+}
+.slow {
+    animation-duration: var(--breath);
+}
+.fast {
+    animation-duration: var(--heartbeat);
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 @media only screen and (max-width: 821px) {
     :root {
-    }   
+        --collosal: calc(100vw - var(--space) * 3);
+    }
+    header {
+        padding: calc(calc(var(--space) * 3) + var(--shadow)) var(--space) var(--space);
+    }
+    h1 {
+        font-size: large;
+    }
+    .projects {
+        grid-template-rows: repeat(1, calc(var(--collosal)/2));
+        grid-template-columns: repeat(1, var(--collosal));
+    }
 }
