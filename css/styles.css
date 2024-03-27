@@ -256,7 +256,7 @@ main a:hover {
     transition: background-color var(--heartbeat) ease-in-out, box-shadow var(--heartbeat) ease-in-out;
 }
 .project-ccc {
-    background-image: url(/images/projects/ccc.jpg);
+    background-image: url(images/projects/ccc.jpg);
     
 }
 .project-2 {
