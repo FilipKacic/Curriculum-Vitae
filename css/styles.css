@@ -65,7 +65,7 @@ body {
     padding: var(--space);
 }
 hr {
-    margin: var(--space);
+    margin: var(--icon) var(--space);
     border-width: var(--shadow);
     border-radius: 100%;
     opacity: 0.3;
