@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // calculates the height of the header and sets the top of the dropdown menu
     function setDropdownMenuTop() {
         const headerHeight = document.querySelector('header').offsetHeight;
-        const icon = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--icon'));
+        // const icon = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--icon'));
         const space = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--space'));
         const dropdownMenu = document.querySelector('.dropdown-menu');
-        dropdownMenu.style.top = `calc(${headerHeight}px + ${space}`;
+        dropdownMenu.style.top = `calc(${headerHeight}px + ${space}px)`;
     }
     setDropdownMenuTop();
 

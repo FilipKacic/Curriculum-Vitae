@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';">
     <title>Filip Kačić's CV</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -18,8 +19,8 @@
             <img src="/images/icons/google/menu.svg" alt="menu" class="dropdown-menu-button">
             <div class="dropdown-menu">
                 <a href="#con">Contact</a>
-                <a href="#ski">Skillset</a>
                 <a href="#pro">Projects</a>
+                <a href="#ski">Skillset</a>
                 <a href="#edu">Education</a>
                 <a href="#bio">Biography</a>
             </div>
@@ -38,38 +39,41 @@
                     E-mail:
                     <a href="mailto:filipkacic@protonmail.com">
                         <img src="images/icons/icons8/protonmail.svg" class="social-icon">
-                    </a>,
+                    </a>
                     LinkedIn:
                     <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer">
                         <img src="images/icons/icons8/linkedin.svg" class="social-icon">
-                    </a>,
+                    </a>
                     GitHub:
                     <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer">
                         <img src="images/icons/icons8/github.svg" class="social-icon">
-                    </a>,
+                    </a>
                     Telegram:
                     <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer">
                         <img src="images/icons/icons8/telegram.svg" class="social-icon">
                     </a>
                 </div>
             </div>
+            <hr>
             <div id="pro">
                 <h2>Projects</h2>
                 <h3>Finished</h3>
                 <div class="projects">
-                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Platonic Dice Roller</a></div>
-                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Pythagorean Tuner</a></div>     
-                    <div class="project project-4"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Celecast Cards</a></div>
+                    <div class="project project-pdr"><a href="https://duckduckgo.com" target="_blank" rel="noopener noreferrer">Pečat</a></div>
+                    <div class="project project-pdr"><a href="https://github.com/FilipKacic/PerfectDiceRoller" target="_blank" rel="noopener noreferrer">Platonic Dice Roller</a></div>
+                    <div class="project project-ccc"><a href="https://filipkacic.github.io/Celecast-Cards-Website/" target="_blank" rel="noopener noreferrer">Celecast Cards</a></div>
                 </div>
                 <h3>In Pogress</h3>
                 <div class="projects">
-                    <div class="project project-3"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Oathbreaker I</a></div>
-                    <div class="project project-4"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Hunter's Gamble</a></div>
-                    <div class="project project-1"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Good Game Design</a></div>
-                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">A Deterministic Essay on Randomness</a></div>
+                    <div class="project project-1"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Pythagorean Tuner</a></div>     
+                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Oathbreaker I</a></div>
+                    <div class="project project-3"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Hunter's Gamble</a></div>
+                    <!-- <div class="project project-4"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Good Game Design</a></div>
+                    <div class="project project-5"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">A Deterministic Essay on Randomness</a></div> -->
                 </div>
                 <p>...</p>
             </div>
+            <hr>
             <div id="ski">
                 <h2>Skillset</h2>
                 <ul>
@@ -87,6 +91,7 @@
                     <li>Willingness to learn more</li>
                 </ul>
             </div>
+            <hr>
             <div id="edu">
                 <h2>Education</h2>
                 <ol>
@@ -95,11 +100,13 @@
                     <li><a href="http://os-brajda-ri.skole.hr/" target="_blank" rel="noopener noreferrer">Elementary School "Brajda"</a></li>
                 </ol>
             </div>
+            <hr>
             <div id="bio">
                 <h2>Biography</h2>
                 <p><sub><img src="/images/icons/google/factory.svg"></sub>Dwelling place: Rijeka, Croatia</p>
                 <p><sub><img src="/images/icons/google/fort.svg"></sub>Birth place: Dubrovnik, Croatia</p>
             </div>
+            <hr>
         </div>
     </main>
     <footer class="fadeIn fast">

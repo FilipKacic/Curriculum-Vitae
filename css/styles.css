@@ -1,14 +1,15 @@
 :root {
     /* color palette */
     --pitch-black: black;
-    --dark-gray: rgb(16, 16, 16);
+    --dark-black: rgb(16, 16, 16);
+    --dirty-white: rgb(239, 239, 239);
     --pure-white: white;
 
     /* custom sizes */
     --shadow: 2px;
     --space: 8px;
     --icon: 50px;
-    --collosal: calc(100vw / 2 - var(--space) * 3);
+    --collosal: calc(100vw/2 - var(--space)*3);
 
     /* right timings */
     --blink: 0.3s;
@@ -27,24 +28,18 @@
     src: url('/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'local-3';
+    src: url('/fonts/Ballet/static/Ballet_60pt-Regular.ttf');
+}
+
 /* whole document styles */
 * {
     margin: 0;
-    border: 0;
     padding: 0;
     box-sizing: border-box;
     text-align: justify;
     /* filter: invert(100%); */
-}
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'local-2', monospace, sans-serif;
-    scroll-behavior: smooth;
-    color: var(--pitch-black);
-    background-color: var(--pure-white);
-    overflow-x: hidden;
-    /* cursor: url('/images/custom-cursor.svg'), auto; */
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'local-1', monospace, sans-serif;
@@ -52,7 +47,29 @@ h1, h2, h3, h4, h5, h6 {
 h3 {
     text-align: center;
 }
-
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'local-2', monospace, sans-serif;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    color: var(--pitch-black);
+    background-color: var(--pure-white);
+    /* cursor: url('/images/custom-cursor.svg'), auto; */
+}
+#signature {
+    font-family: 'local-3';
+    text-align: center;
+    color: var(--dark-black);
+    padding: var(--space);
+}
+hr {
+    margin: var(--space);
+    border-width: var(--shadow);
+    border-radius: 100%;
+    opacity: 0.3;
+}
 /* ---------- header ---------- */
 header {
     display: flex;
@@ -60,14 +77,14 @@ header {
     align-items: center;
     flex-wrap: nowrap;
     color: var(--pure-white);
-    background-image: linear-gradient(to bottom, var(--dark-gray), var(--pitch-black));
+    background-image: linear-gradient(to bottom, var(--dark-black), var(--pitch-black));
     position: sticky;
     top: 0;
     padding: calc(var(--space) + var(--shadow)) var(--space) var(--space);
     box-shadow: 0 0 var(--shadow) var(--shadow) var(--pitch-black);
     z-index: 1;
     opacity: 0.9;
-    min-width: max-content;
+    width: 100%;
 }
 
 .header-title {
@@ -80,21 +97,21 @@ header {
     width: var(--icon);
     height: var(--icon);
     filter: invert(100%);   
-    transition: var(--heartbeat) ease-in-out;
+    transition: filter var(--heartbeat) ease-in-out;
     flex-shrink: 0;
 }
 .dropdown-menu-button:hover {
     cursor: pointer;
     filter: invert(100%) drop-shadow(0 0 var(--shadow) var(--pure-white));
-    transition: var(--heartbeat) ease-in-out;
+    transition: filter var(--heartbeat) ease-in-out;
 }
 .dropdown-menu-button.active {
     filter: invert(100%) drop-shadow(0 0 calc(var(--shadow) * 2) var(--pure-white));
-    transition: var(--heartbeat) ease-in-out;
+    transition: filter var(--heartbeat) ease-in-out;
 }
 .dropdown-menu-button.active:hover {
     filter: invert(100%) drop-shadow(0 0 calc(var(--shadow) * 4) var(--pure-white));
-    transition: var(--heartbeat) ease-in-out;
+    transition: filter var(--heartbeat) ease-in-out;
 }
 
 /* ----- dropdown menu ----- */
@@ -125,7 +142,7 @@ header {
 }
 .dropdown-menu a:hover,
 .currentSection {
-    background-color:var(--dark-gray);
+    background-color:var(--dark-black);
     text-shadow: 0 0 var(--shadow) var(--pure-white);
     transition: background-color var(--heartbeat) ease-in-out, text-shadow var(--heartbeat) ease-in-out;
 }
@@ -144,14 +161,14 @@ main {
 }
 #monolith {
     padding: calc(var(--space)*2) var(--space);
-    max-width: 100vw;
+    max-width: calc(100vw - var(--icon));
 }
 main h1, h2, h3, h4, h5, h6 {
-    margin: calc(var(--space) * 2) 0 var(--space) 0;
+    margin: calc(var(--space)*2) 0 var(--space) 0;
     color: inherit;
     background-color: inherit;
 }
-main p {
+main p { /* used in: #pro */
     margin: var(--space) 0;
     color: var(--pitch-black);
 }
@@ -202,7 +219,6 @@ main a:hover {
 
 /* ----- projects ----- */
 #pro {
-
 }
 .projects {
     display: grid;
@@ -211,7 +227,7 @@ main a:hover {
     grid-auto-flow: row;
     grid-auto-rows: calc(var(--collosal)/2);
     grid-gap: var(--space);
-    margin: var(--space);
+    /* margin: var(--space); */
     align-self: center;
 }
 .project {
@@ -224,10 +240,24 @@ main a:hover {
     padding: var(--space);
     color: inherit;
     text-shadow: 0 0 var(--shadow) var(--shadow) var(--pitch-black);
-    background-color: gainsboro;
+    background-color: var(--dirty-white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-.project-1 {
-    background-image: ;
+.projects a {
+    background-color: var(--pure-white);
+    box-shadow: 0 0 var(--shadow) var(--pure-white);
+    transition: background-color var(--heartbeat) ease-in-out, box-shadow var(--heartbeat) ease-in-out;
+}
+.projects a:hover {
+    background-color: var(--pitch-black);
+    box-shadow: 0 0 var(--shadow) var(--pitch-black);
+    transition: background-color var(--heartbeat) ease-in-out, box-shadow var(--heartbeat) ease-in-out;
+}
+.project-ccc {
+    background-image: url(/images/projects/ccc.jpg);
+    
 }
 .project-2 {
     background-image: ;
@@ -241,13 +271,10 @@ main a:hover {
 
 /* ----- skillset ----- */
 #ski ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     list-style: none;
 }
 #ski ul li {
-    margin: var(--space) 0 var(--space) calc(var(--space)*2);
+    margin: var(--space) 0 var(--space) calc(var(--space)*3);
     padding-left: var(--space);
 }
 #ski ul li::marker {
@@ -283,13 +310,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--space);
-    background-color: inherit;
-}
-#signature {
-    text-align: center;
-    color: var(--dark-gray);
-    padding: var(--space);
+    padding: calc(var(--space)*2) var(--space);
+    background: linear-gradient(to top, var(--dirty-white), var(--pure-white));
 }
 .social-icons {
     display: flex;
@@ -298,7 +320,7 @@ footer {
     flex-wrap: wrap;
 }
 .social-icons .social-icon {
-    margin: 0 var(--space);
+    margin: var(--space);
     transition: filter var(--heartbeat), transform var(--heartbeat);
 }
 .social-icons .social-icon:hover {
@@ -309,13 +331,12 @@ footer {
 
 /* - spices - */
 ::-webkit-scrollbar {
-    width: var(--space);
+    width: calc(var(--space)*2);
 }
 ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(to top, var(--pitch-black), var(--pure-white), var(--pitch-black));
     box-shadow: inset 0 0 var(--shadow) var(--pitch-black);
     cursor: move;
-    column-rule-color: aqua;
 }
 ::-webkit-scrollbar-track {
     background-color: var(--pitch-black);
@@ -346,10 +367,10 @@ footer {
 }
 @media only screen and (max-width: 821px) {
     :root {
-        --collosal: calc(100vw - var(--space) * 3);
+        --collosal: calc(100vw - var(--space)*3);
     }
     header {
-        padding: calc(calc(var(--space) * 3) + var(--shadow)) var(--space) var(--space);
+        padding: calc(calc(var(--space)*3) + var(--shadow)) var(--space) var(--space);
     }
     h1 {
         font-size: large;
