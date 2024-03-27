@@ -20,17 +20,17 @@
 /* local fonts */
 @font-face {
     font-family: 'local-1';
-    src: url('/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf');
+    src: url('fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf');
 }
 
 @font-face {
     font-family: 'local-2';
-    src: url('/fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf');
+    src: url('fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf');
 }
 
 @font-face {
     font-family: 'local-3';
-    src: url('/fonts/Ballet/static/Ballet_60pt-Regular.ttf');
+    src: url('fonts/Ballet/static/Ballet_60pt-Regular.ttf');
 }
 
 /* whole document styles */
