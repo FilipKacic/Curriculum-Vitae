@@ -365,7 +365,7 @@ footer {
         opacity: 1;
     }
 }
-@media only screen and (max-width: 821px) {
+@media only screen and (max-width: 1024px) {
     :root {
         --collosal: calc(100vw - var(--space)*3);
     }
