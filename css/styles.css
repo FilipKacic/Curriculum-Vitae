@@ -255,18 +255,11 @@ main a:hover {
     box-shadow: 0 0 var(--shadow) var(--pitch-black);
     transition: background-color var(--heartbeat) ease-in-out, box-shadow var(--heartbeat) ease-in-out;
 }
+.project-pgir {
+    background-image: url(../images/projects/pgir.png);
+}
 .project-ccc {
     background-image: url(../images/projects/ccc.jpg);
-    
-}
-.project-2 {
-    background-image: ;
-}
-.project-3 {
-    background-image: ;
-}
-.project-4 {
-    background-image: ;
 }
 
 /* ----- skillset ----- */
