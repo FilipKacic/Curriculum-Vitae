@@ -244,6 +244,7 @@ main a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 .projects a {
     background-color: var(--pure-white);
@@ -259,10 +260,14 @@ main a:hover {
     background-image: url(../images/projects/pgir.png);
 }
 .project-ris {
-    
+    background-image: url(../images/projects/ris.png);
 }
 .project-ccc {
     background-image: url(../images/projects/ccc.jpg);
+}
+
+.in-progress {
+    filter: blur(3px);
 }
 
 /* ----- skillset ----- */
