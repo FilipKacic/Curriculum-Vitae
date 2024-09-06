@@ -256,14 +256,17 @@ main a:hover {
     box-shadow: 0 0 var(--shadow) var(--pitch-black);
     transition: background-color var(--heartbeat) ease-in-out, box-shadow var(--heartbeat) ease-in-out;
 }
+.project-ccc {
+    background-image: url(../images/projects/ccc.jpg);
+}
+.project-pdr {
+    background-image: url(../images/projects/pdr.png);
+}
 .project-pgir {
     background-image: url(../images/projects/pgir.png);
 }
 .project-ris {
     background-image: url(../images/projects/ris.png);
-}
-.project-ccc {
-    background-image: url(../images/projects/ccc.jpg);
 }
 
 .in-progress {
