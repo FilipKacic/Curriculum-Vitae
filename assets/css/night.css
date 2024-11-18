@@ -1,0 +1,21 @@
+body.night {
+    color: var(--pure-white);
+    background-color: var(--pitch-black);
+}
+header.night {
+    background-color: var(--transparent-dark);
+    box-shadow: 0 0 var(--detail_size) var(--transparent-dark);
+}
+.svg-btn.night {
+    filter: invert(100%);
+}
+    .svg-btn:hover.night {
+        filter: invert(0%) drop-shadow(0 0 var(--detail_size) var(--pure-white));
+    }
+    main.a.textual.night:hover {
+        color: var(--pitch-black);
+        text-shadow: 0 0 var(--detail_size) var(--pure-white);
+    }
+footer.night {
+    background: linear-gradient(to bottom, var(--pitch-black), var(--transparent-gray));
+}

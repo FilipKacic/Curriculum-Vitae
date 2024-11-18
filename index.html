@@ -3,129 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self';"> -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline';"> -->
-    <title>Filip Kačić's CV</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="js/script.js"></script>
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" href="/assets/css/root.css">
+    <link rel="stylesheet" href="/assets/css/day.css">
+    <link rel="stylesheet" href="/assets/css/twilight.css">
+    <link rel="stylesheet" href="/assets/css/night.css">
+    <link rel="stylesheet" href="/assets/css/vertical-media.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/special.css">
+    <link rel="icon" href="/assets/icons/favicon.ico?" type="image/x-icon">
+    <script src="assets/js/main.js"></script>
 </head>
 <body>
-    <header class="fadeIn slow">
-        <div class="header-title">
-            <h1>Curriculum Vitae</h1>
+    <header>
+        <div id="banner">
+            <img src="/assets/icons/my/shift.svg" id="styleSwitcher" class="svg-btn" alt="Switch styles!">
+            <h1 class="typewriter">Curriculum Vitae</h1>
+            <img src="/assets/icons/my/navigation.svg" id="navSwitcher" class="svg-btn" alt="Show navigation!">
         </div>
-        <div class="dropdown-container">
-            <img src="images/icons/google/menu.svg" alt="menu" class="dropdown-menu-button">
-            <div class="dropdown-menu">
-                <a href="#con">Contact</a>
-                <a href="#pro">Projects</a>
-                <a href="#ski">Skillset</a>
-                <a href="#edu">Education</a>
-                <a href="#bio">Biography</a>
-            </div>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#con" class="textual"><b>Contact</b></a></li>
+                <li><a href="#pro" class="textual"><b>Projects</b></a></li>
+                <li><a href="#ski" class="textual"><b>Skillset</b></a></li>
+                <li><a href="#edu" class="textual"><b>Education</b></a></li>
+                <li><a href="#bio" class="textual"><b>Biography</b></a></li>
+            </ul>
+        </nav>
     </header>
-    <main class="fadeIn fast">
-        <div id="monolith">
-            <div id="page-0">
-                <div class="portrait">
-                    <img src="images/face.jpg" alt="face">
-                </div>
-            </div>
-            <div id="con">
-                <h2>Contact</h2>
-                <div class="social-icons">
-                    E-mail:
-                    <a href="mailto:filipkacic@protonmail.com">
-                        <img src="images/icons/icons8/protonmail.svg" class="social-icon">
-                    </a>
-                    LinkedIn:
-                    <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer">
-                        <img src="images/icons/icons8/linkedin.svg" class="social-icon">
-                    </a>
-                    GitHub:
-                    <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer">
-                        <img src="images/icons/icons8/github.svg" class="social-icon">
-                    </a>
-                    Telegram:
-                    <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer">
-                        <img src="images/icons/icons8/telegram.svg" class="social-icon">
-                    </a>
-                </div>
-            </div>
-            <hr>
-            <div id="pro">
-                <h2>Projects</h2>
-                <h3>Finished:</h3>
-                <div class="projects">
-                    <div class="project project-vn"><a href="https://github.com/FilipKacic/VanillaNote" target="_blank" rel="noopener noreferrer">Vanilla Note (android mobile application)</a></div>
-                    <div class="project project-pdr"><a href="https://github.com/FilipKacic/PerfectDiceRoller" target="_blank" rel="noopener noreferrer">Perfect Dice Roller (android mobile application)</a></div>
-                    <div class="project project-ris"><a href="https://github.com/FilipKacic/ReceptiIspodSunca" target="_blank" rel="noopener noreferrer">Dynamic website for personal usage</a></div>
-                    <div class="project project-pgir"><a href="https://pecatrijeka.com" target="_blank" rel="noopener noreferrer">Static website for a local business</a></div>
-                    <div class="project project-ccc"><a href="https://filipkacic.github.io/Celecast-Cards-Website/" target="_blank" rel="noopener noreferrer">Celecast Cards (physical card game)</a></div>
 
-                    <div class="project project-1"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer"></a></div>
-                </div>
-                <h3>In Pogress:</h3>
-                <div class="projects in-progress">
 
-                    <div class="project project-2"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">Unknown 2D PC Game</a></div>
-                    <div class="project project-3"><a href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer"></a></div>
-                </div>
-            </div>
+    <main>
+        <section id="con">
+            <h2>Contact</h2>
             <hr>
-            <div id="ski">
-                <h2>Skillset</h2>
+            <img src="https://via.placeholder.com/150" id="photo" alt="photo">
+            <ul class="contacts">
+                <li>E-mail: <a href="mailto:filipkacic@protonmail.com" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/protonmail.svg" class="svg-btn" alt="filipkacic@protonmail.com"></a></li>
+                <li>GitHub: <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/github.svg" class="svg-btn" alt="FilipKacic"></a></li>
+                <li>LinkedIn: <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/linkedin.svg" class="svg-btn" alt="Filip Kačić"></a></li>
+                <li>Telegram: <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/telegram.svg" class="svg-btn" alt="khadzik"></a></li>
+            </ul>
+        </section>
+        <section id="pro">
+            <h2>Projects</h2>
+            <hr>
+            <ul>
+                <li>Android mobile applications</li>
                 <ul>
-                    <li>Problem-solving skills, logic, work discipline</li>
-                    <li>Project and time management, working with people</li>
-                    <li>Proficiency in multiple programming languages: <i>C++</i>, <i>Python</i>,...</li>
-                    <li>Knowledge of software design patterns</li>
-                    <li>Web development: <i>HTML</i>, <i>CSS</i>, <i>JavaScript</i>, <a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">Django</a></li>
-                    <!-- <li>Understanding of database concepts: MongoDB, MySQL, PostgreSQL, Oracle</li>  -->
-                    <li>Graphic design: <a href="https://inkscape.org/" target="_blank" rel="noopener noreferrer">Inkscape</a>, <a href="https://www.coreldraw.com/en/" target="_blank" rel="noopener noreferrer">CorelDRAW</a>, <a href="https://www.pinta-project.com/" target="_blank" rel="noopener noreferrer">Pinta</a>, <a href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</a></li>
-                    <li>Android mobile application development: <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer">Android Studio</a> & <i>Kotlin</i></li>
-                    <li>Game development: <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot Engine</a> & <i>GodotScript</i></li>
-                    <li>Game design, world building</li>
-                    <li>Music composition: <a href="https://ardour.org/" target="_blank" rel="noopener noreferrer">Ardour</a></li>
-                    <li>Willingness to learn more!</li>
+                    <li><a href="https://github.com/FilipKacic/VanillaNote" class="textual" target="_blank" rel="noopener noreferrer">Vanilla Note</a></li>
+                    <li><a href="https://github.com/FilipKacic/PerfectDiceRoller" class="textual" target="_blank" rel="noopener noreferrer">Perfect Dice Roller</a></li>
                 </ul>
-            </div>
+                <li>Websites for local businesses</li>
+                <ul>
+                    <li><a href="https://tip-top-dizajn.vercel.app/" class="textual" target="_blank" rel="noopener noreferrer">Tip Top Dizajn</a></li>
+                    <li><a href="https://pecatrijeka.com/" class="textual" target="_blank" rel="noopener noreferrer">Pečat</a></li>
+                    
+                </ul>
+                <li>Other</li>
+                <ul>
+                    <li><a href="https://filipkacic.github.io/Celecast-Cards-Website/" class="textual" target="_blank" rel="noopener noreferrer">Celecast Cards</a></li>
+                </ul>
+            </ul>
+        </section>
+
+        <section id="ski">
+            <h2>Skillset</h2>
             <hr>
-            <div id="edu">
-                <h2>Education</h2>
-                <ol>
-                    <li><a href="https://www.inf.uniri.hr/" target="_blank" rel="noopener noreferrer">University of Rijeka, Faculty of Informatics and Digital Technologies</a><br><i>(bachelor's degree in computer science)</i></li>
-                    <li><a href="http://gimnazija-amohorovicica-ri.skole.hr/" target="_blank" rel="noopener noreferrer">Gymnasium of Andrija Mohorovičić</a></li>
-                    <li><a href="http://os-brajda-ri.skole.hr/" target="_blank" rel="noopener noreferrer">Elementary School "Brajda"</a></li>
-                </ol>
-            </div>
+            <ul>
+                <li>Android mobile application development</li>
+                    <ul>
+                        <li><a href="https://developer.android.com/studio" class="textual" target="_blank" rel="noopener noreferrer">Android Studio</a></li>
+                    </ul>
+                <li>Game design</li>
+                    <ul>
+                        <li><a href="https://godotengine.org/" class="textual" target="_blank" rel="noopener noreferrer">Godot</a></li>
+                        <li><a href="https://unity.com/" class="textual" target="_blank" rel="noopener noreferrer">Unity</a></li>
+                    </ul>
+                <li>Programming and its patterns</li>
+                <ul>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+                <li>Web development</li>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Django</li>
+                    </ul>
+                <li>Graphic design</li>
+                    <ul>
+                        <li><a href="https://inkscape.org/" class="textual" target="_blank" rel="noopener noreferrer"></a>Inkscape</li>
+                        <li><a href="https://www.coreldraw.com/en/" class="textual" target="_blank" rel="noopener noreferrer"></a>CorelDRAW</li>
+                        <li><a href="https://www.pinta-project.com/" class="textual" target="_blank" rel="noopener noreferrer"></a>Pinta</li>
+                        <li><a href="https://www.getpaint.net/" class="textual" target="_blank" rel="noopener noreferrer"></a>Paint.NET</li>
+                    </ul>
+                <li>CNC operating</li>
+                <li>Laser engraving and cutting</li>
+                <li>Music composition</li>
+                    <ul>
+                        <li><a href="https://ardour.org/" class="textual" target="_blank" rel="noopener noreferrer"></a>Ardour</li>
+                        <li><a href="https://www.bandlab.com/" class="textual" target="_blank" rel="noopener noreferrer"></a>BandLab</li>
+                    </ul>
+                <li>Work ethic, critical thinking, problem solving,...</li>
+                <li>Willingness to learn more!</li>
+            </ul>
+        </section>
+
+        <section id="edu">
+            <h2>Education</h2>
             <hr>
-            <div id="bio">
-                <h2>Biography</h2>
-                <p><sub><img src="images/icons/google/factory.svg"></sub>Dwelling place: Rijeka, Croatia</p>
-                <p><sub><img src="images/icons/google/fort.svg"></sub>Birth place: Dubrovnik, Croatia</p>
-            </div>
+            <p>Bachelor's degree in computer science <button id="download_btn">download pdf</button></p>
+            <ul>
+                <li><a href="https://www.inf.uniri.hr/" class="textual" target="_blank" rel="noopener noreferrer">University of Rijeka, Faculty of Informatics and Digital Technologies</a></li>
+                <li><a href="http://gimnazija-amohorovicica-ri.skole.hr/" class="textual" target="_blank" rel="noopener noreferrer">Gymnasium of Andrija Mohorovičić</a></li>
+                <li><a href="http://os-brajda-ri.skole.hr/" class="textual" target="_blank" rel="noopener noreferrer">Elementary School "Brajda"</a></li>
+            </ul>
+        </section>
+
+        <section id="bio">
+            <h2>Biography</h2>
             <hr>
-        </div>
+            <p><span id="age">???</span>-years-old. Currently working in a private graphic design company.</p>
+            <ul>
+                <li>Dwelling place: Rijeka, Croatia</li>
+                <li>Birth place: Dubrovnik, Croatia</li>
+            </ul>
+        </section>
     </main>
-    <footer class="fadeIn fast">
-        <div class="social-icons">
-            <a href="mailto:filipkacic@protonmail.com">
-                <img src="images/icons/icons8/protonmail.svg" class="social-icon">
-            </a>
-            <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer">
-                <img src="images/icons/icons8/linkedin.svg" class="social-icon">
-            </a>
-            <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer">
-                <img src="images/icons/icons8/github.svg" class="social-icon">
-            </a>
-            <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer">
-                <img src="images/icons/icons8/telegram.svg" class="social-icon">
-            </a>
-        </div>
-        <div id="signature">Filip Kačić</div>
+
+    <footer>
+        <ul id="repeated-contacts" class="contacts">
+            <li><a href="mailto:filipkacic@protonmail.com" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/protonmail.svg" class="svg-btn" alt="filipkacic@protonmail.com"></a></li>
+            <li><a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/github.svg" class="svg-btn" alt="FilipKacic"></a></li>
+            <li><a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/linkedin.svg" class="svg-btn" alt="Filip Kačić"></a></li>
+            <li><a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/8/telegram.svg" class="svg-btn" alt="khadzik"></a></li>
+        </ul>
+        <h6 id="signature">&#169;<span id="current_year">????</span> Filip Kačić</h6>
     </footer>
+
+    <!-- scripts -->
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/svg_btns.js"></script>
+    <script src="assets/js/download_btn.js"></script>
+    <script src="assets/js/time_calc.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

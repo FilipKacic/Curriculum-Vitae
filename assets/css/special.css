@@ -1,0 +1,4 @@
+::selection {
+    background-color: var(--transparent-dark);
+    box-shadow: 0 0 var(--detail_size) var(--transparent-dark);
+}

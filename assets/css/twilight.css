@@ -1,0 +1,103 @@
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav {
+    display: none;
+}
+    nav.visible {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0 var(--horizontal_space) var(--horizontal_space);
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li a.textual {
+        padding: var(--horizontal_space);
+    }    
+
+main {
+    display: flex;
+    flex-direction: column; 
+    z-index: 1;
+}
+section {
+    padding: 0 16%; 
+    margin: var(--horizontal_space) 0;
+}
+hr {
+    border: 0;
+    border-top: var(--hairline) solid var(--dark-gray);
+    margin: var(--horizontal_space) 0;
+    width: 100%;
+}
+#photo {
+    margin: var(--horizontal_space) var(--vertical_space);
+    border: var(--hairline) groove var(--dark-gray);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+    margin: var(--horizontal_space) 0;
+}
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+    .contacts li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+a.textual {
+    color: inherit;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 0 var(--horizontal_space);
+    display: inline-flex;   
+}
+    a.textual:hover {
+        color: var(--pure-white);
+        text-shadow: 0 0 var(--detail_size) var(--pitch-black);
+        background-color: var(--transparent-gray);
+        transition: color var(--blink) ease-in-out, text-shadow var(--blink) ease-in-out, background-color var(--blink) ease-in-out;
+    }
+    
+button {
+    all: unset;
+    cursor: pointer;
+    color: var(--pitch-black);
+    background: radial-gradient(ellipse, var(--pure-white), var(--light-gray));
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: var(--horizontal_space);
+    padding: var(--horizontal_space);
+    border: var(--hairline) groove var(--dark-gray);
+    border-radius: var(--detail_size);
+    
+}
+    button:active {
+        background: radial-gradient(ellipse, var(--light-gray), var(--pure-white));
+    }
+
+#repeated-contacts {
+    opacity: 0.2;
+    margin: var(--horizontal_space);
+}
+
+#signature {
+    margin: var(--horizontal_space);
+}

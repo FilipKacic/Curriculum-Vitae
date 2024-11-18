@@ -1,0 +1,25 @@
+:root {
+    /* space */
+    --hairline: 1px;
+    --detail_size: 3px;
+    --horizontal_space: 12px;
+    --button_size: 48px;
+    --vertical_space: 192px;
+
+    /* color */
+    --pitch-black: black;
+    --dark-gray: darkslategray;
+    --light-gray: gainsboro;
+    --pure-white: white;
+    --transparent-gray: rgba(128, 128, 128, 0.3);
+    --transparent-dark: rgba(47, 79, 79, 0.9);
+    --transparent-light: rgba(112, 128, 144, 0.9);
+
+    /* time */
+    --blink: 0.3s;
+    --heartbeat: 1s;
+}
+
+* {
+    box-sizing: border-box;
+}
