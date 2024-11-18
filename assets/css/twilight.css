@@ -18,11 +18,11 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: space-between;
     }
-    nav ul li a.textual {
-        padding: var(--horizontal_space);
-    }    
+        nav ul li a.textual {
+            padding: var(--horizontal_space);
+        }    
 
 main {
     display: flex;

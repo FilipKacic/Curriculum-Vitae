@@ -4,9 +4,7 @@
     }
     nav ul {
         flex-direction: column;
-    }
-    nav ul li a.textual {
-        padding: 0 var(--vertical_space);
+        align-items: flex-start;
     }
     .contacts {
         flex-direction: column;
