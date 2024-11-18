@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Local-1';
-    src: url('assets/fonts/Monofett/Monofett-Regular.ttf');
+    src: url('../fonts/Monofett/Monofett-Regular.ttf');
 }
 @font-face {
     font-family: 'Local-2';
-    src: url('assets/fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf');
+    src: url('../fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf');
 }
 @font-face {
     font-family: 'Local-3';
-    src: url('assets/fonts/Anonymous_Pro/AnonymousPro-Regular.ttf');
+    src: url('../fonts/Anonymous_Pro/AnonymousPro-Regular.ttf');
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Local-2', monospace, sans-serif;
