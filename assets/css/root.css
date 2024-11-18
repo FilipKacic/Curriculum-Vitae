@@ -18,6 +18,7 @@
     /* time */
     --blink: 0.3s;
     --heartbeat: 1s;
+    --onetwothree: 3s;
 }
 
 * {

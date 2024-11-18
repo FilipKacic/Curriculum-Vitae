@@ -1,9 +1,9 @@
 .typewriter {
     overflow: hidden;
     white-space: nowrap;
-    border-right: 3px solid var(--pure-white);
-    width: 16ch; /* Adjust width as needed */
-    animation: typing 3s steps(16, end), blink var(--blink) step-end infinite alternate;
+    border-right: var(--detail_size) solid var(--pure-white);
+    width: 16.1ch;
+    animation: typing var(--onetwothree) steps(16, end), blink var(--heartbeat) step-end infinite alternate;
 }
 
 @keyframes typing {

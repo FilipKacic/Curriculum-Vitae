@@ -1,4 +1,7 @@
 @media (max-width: 810px) {
+    .typewriter {
+        width: 2.1ch !important;
+    }
     nav ul {
         flex-direction: column;
     }
