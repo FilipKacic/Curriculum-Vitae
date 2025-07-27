@@ -6,12 +6,12 @@ const header = document.querySelector("header");
 window.addEventListener("scroll", () => {
     let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-    if (scrollTop > lastScrollTop) {
-        // Scroll down - hide entire header
-        header.style.transform = "translateY(-100%)";
-    } else {
+    if (scrollTop > lastScrollTop)  {
         // Scroll up - show entire header
         header.style.transform = "translateY(0)";
+    } else {
+        // Scroll down - hide entire header
+        header.style.transform = "translateY(-100%)";
     }
 
     lastScrollTop = scrollTop;
