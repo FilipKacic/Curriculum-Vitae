@@ -1,20 +1,17 @@
 @font-face {
     font-family: 'Local-1';
-    src: url('../fonts/Monofett/Monofett-Regular.ttf');
-}
-@font-face {
-    font-family: 'Local-2';
     src: url('../fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf');
 }
+
 @font-face {
-    font-family: 'Local-3';
-    src: url('../fonts/Anonymous_Pro/AnonymousPro-Regular.ttf');
+    font-family: 'Local-2';
+    src: url('../fonts/Atkinson_Hyperlegible_Mono/AtkinsonHyperlegibleMono-VariableFont_wght.ttf');
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Local-2', monospace, sans-serif;
-    text-align: center;
-    margin: var(--horizontal_space) 0;
+    font-family: 'Local-1', monospace, sans-serif;
 }
+
 body {
-    font-family: 'Local-3', sans-serif;
+    font-family: 'Local-2', sans-serif;
 }

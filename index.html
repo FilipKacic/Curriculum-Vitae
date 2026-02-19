@@ -4,31 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae</title>
-    <link rel="stylesheet" href="assets/css/root.css">
-    <link rel="stylesheet" href="assets/css/day.css">
-    <link rel="stylesheet" href="assets/css/twilight.css">
-    <link rel="stylesheet" href="assets/css/night.css">
-    <link rel="stylesheet" href="assets/css/vertical-media.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
-    <link rel="stylesheet" href="assets/css/special.css">
-    <link rel="icon" href="assets/icons/favicon.ico?" type="image/x-icon">
-    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Scripts -->
+    <script defer src="assets/js/clock.js"></script>
+    <script defer src="assets/js/PDFdownloader.js"></script>
+    <script defer src="assets/js/headerHider.js"></script>
+    <script defer src="assets/js/typewriter.js"></script>
+    <script defer src="assets/js/sectionRevealer.js"></script>
+
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div id="banner">
-            <img src="assets/icons/my/shift.svg" id="styleSwitcher" class="svg-btn" alt="Switch styles!">
-            <h1 id="logo" class="typewriter">Curriculum Vitae</h1>
-            <img src="assets/icons/my/navigation.svg" id="navSwitcher" class="svg-btn" alt="Show navigation!">
-        </div>
+        <h1 id="logo" class="typewriter" data-text="Curriculum Vitae"></h1>
         <nav>
-            <ul>
-                <li><a href="#con" class="textual"><b>Contact</b></a></li>
-                <li><a href="#ski" class="textual"><b>Skillset</b></a></li>
-                <li><a href="#edu" class="textual"><b>Education</b></a></li>
-                <li><a href="#bio" class="textual"><b>Biography</b></a></li>
-            </ul>
+            <a href="#con">
+                Contact
+            </a>
+            <a href="#ski">
+                Skillset
+            </a>
+
+            <a href="#edu">
+                Education
+            </a>
+            <a href="#bio">
+                Biography
+            </a>
         </nav>
     </header>
 
@@ -36,48 +45,54 @@
         <section id="con">
             <h2>Contact</h2>
             <hr>
-            <img src="https://via.placeholder.com/150" id="photo" alt="photo">
-            <ul class="contacts">
-                <li>E-mail: <a href="mailto:filipkacic@protonmail.com" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/protonmail.svg" class="svg-btn" alt="filipkacic@protonmail.com"></a></li>
-                <li>GitHub: <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/github.svg" class="svg-btn" alt="FilipKacic"></a></li>
-                <li>LinkedIn: <a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/linkedin.svg" class="svg-btn" alt="Filip Kačić"></a></li>
-                <li>Telegram: <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/telegram.svg" class="svg-btn" alt="khadzik"></a></li>
-            </ul>
+            <img src="https://picsum.photos/255" alt="Random Photo">
+            <br>
+            <div class="contact-links">
+                <a href="mailto:filipkacic@protonmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/icons/protonmail.svg" class="svg-btn" alt="Email">
+                </a>
+                <a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/icons/github.svg" class="svg-btn" alt="GitHub">
+                </a>
+                <a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/icons/telegram.svg" class="svg-btn" alt="Telegram">
+                </a>
+            </div>
         </section>
+
         <section id="ski">
             <h2>Skillset</h2>
             <hr>
             <ul>
-                <li>Programming</li>
-                <ul>
-                    <li>C++</li>
-                    <li>Python</li>
-                    <li><a href="https://developer.android.com/studio" class="textual" target="_blank" rel="noopener noreferrer">Kotlin</a></li>
-                    <li><a href="https://godotengine.org/" class="textual" target="_blank" rel="noopener noreferrer">GDScript</a></li>
-                </ul>
-                <li>Web development</li>
+                <li>Programming
                     <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
+                        <li><a href="https://code-blocks.en.softonic.com/" target="_blank" rel="noopener noreferrer">C++</a></li>
+                        <li><a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">GDScript</a></li>
+                        <li><a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer">Kotlin</a></li>
                     </ul>
-                <li>Graphic design</li>
+                </li>
+                <li>Web Development
                     <ul>
-                        <li><a href="https://inkscape.org/" class="textual" target="_blank" rel="noopener noreferrer">Inkscape</a></li>
-                        <li><a href="https://www.coreldraw.com/en/" class="textual" target="_blank" rel="noopener noreferrer">CorelDRAW</a></li>
-                        <li><a href="https://www.pinta-project.com/" class="textual" target="_blank" rel="noopener noreferrer">Pinta</a></li>
-                        <li><a href="https://www.getpaint.net/" class="textual" target="_blank" rel="noopener noreferrer">Paint.NET</a></li>
+                        <li>
+                            <a href="https://svelte.dev/" target="_blank" rel="noopener noreferrer">SvelteKit</a>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
+                            </ul>
+                        </li>
                     </ul>
+                </li>
+                <li>Graphic Design
+                    <ul>
+                        <li><a href="https://inkscape.org/" target="_blank" rel="noopener noreferrer">Inkscape</a></li>
+                        <li><a href="https://www.getpaint.net/" target="_blank" rel="noopener noreferrer">Paint.NET</a></li>
+                        <li><a href="https://www.coreldraw.com/en/" target="_blank" rel="noopener noreferrer">CorelDRAW</a></li>
+                    </ul>
+                </li>
                 <li>Computer numerical control operating</li>
                 <li>Laser engraving and cutting</li>
-                <!--
-                <li>Music composition</li>
-                    <ul>
-                        <li><a href="https://famistudio.org/" class="textual" target="_blank" rel="noopener noreferrer">FamiStudio</a></li>
-                        <li><a href="https://ardour.org/" class="textual" target="_blank" rel="noopener noreferrer">Ardour</a></li>
-                        <li><a href="https://www.bandlab.com/" class="textual" target="_blank" rel="noopener noreferrer">BandLab</a></li>
-                    </ul>
-                -->
                 <li>Willingness to learn more!</li>
             </ul>
         </section>
@@ -85,22 +100,37 @@
         <section id="edu">
             <h2>Education</h2>
             <hr>
-            <p>Bachelor's degree in computer science
-                <button id="download_btn">download pdf</button>
-                <button id="download_btn_2">final work</button>
-            </p>
+            <p>Bachelor's degree in computer science</p>
+            <div>
+                <button id="download_btn_1">Download Degree</button>
+                <button id="download_btn_2">Download Work</button>
+            </div>
             <ul>
-                <li><a href="https://www.inf.uniri.hr/" class="textual" target="_blank" rel="noopener noreferrer">University of Rijeka, Faculty of Informatics and Digital Technologies</a></li>
-                <li><a href="http://gimnazija-amohorovicica-ri.skole.hr/" class="textual" target="_blank" rel="noopener noreferrer">Gymnasium of Andrija Mohorovičić</a></li>
-                <li><a href="http://os-brajda-ri.skole.hr/" class="textual" target="_blank" rel="noopener noreferrer">Elementary School "Brajda"</a></li>
+                <li>
+                    <a href="https://www.inf.uniri.hr/" target="_blank" rel="noopener noreferrer">
+                        University of Rijeka, Faculty of Informatics and Digital Technologies
+                    </a>
+                </li>
+                <li>
+                    <a href="http://gimnazija-amohorovicica-ri.skole.hr/" target="_blank" rel="noopener noreferrer">
+                        Gymnasium of Andrija Mohorovičić
+                    </a>
+                </li>
+                <li>
+                    <a href="http://os-brajda-ri.skole.hr/" target="_blank" rel="noopener noreferrer">
+                        Elementary School "Brajda"
+                    </a>
+                </li>
             </ul>
         </section>
 
+        <!-- Biography Section -->
         <section id="bio">
             <h2>Biography</h2>
             <hr>
-            <p><span id="age">???</span>-years-old.</p>
-            <p>Currently working full-time as a CNC operator while indie developing a passion project.</p>
+            <p><span id="age"></span>-years-old.</p>
+            <p>Currently working full-time as a CNC operator.</p>
+            <p>Always cooking something new.</p>
             <ul>
                 <li>Dwelling place: Rijeka, Croatia</li>
                 <li>Birth place: Dubrovnik, Croatia</li>
@@ -108,22 +138,9 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <ul id="repeated-contacts" class="contacts">
-            <li><a href="mailto:filipkacic@protonmail.com" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/protonmail.svg" class="svg-btn" alt="filipkacic@protonmail.com"></a></li>
-            <li><a href="https://github.com/FilipKacic" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/github.svg" class="svg-btn" alt="FilipKacic"></a></li>
-            <li><a href="https://hr.linkedin.com/in/filip-ka%C4%8Di%C4%87-43204829b" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/linkedin.svg" class="svg-btn" alt="Filip Kačić"></a></li>
-            <li><a href="https://t.me/khadzik" target="_blank" rel="noopener noreferrer"><img src="assets/icons/8/telegram.svg" class="svg-btn" alt="khadzik"></a></li>
-        </ul>
-        <h6 id="signature">&#169;<span id="current_year">????</span> Filip Kačić</h6>
+        <h6 id="signature">&#169;<span id="current_year"></span> Filip Kačić</h6>
     </footer>
-
-    <!-- scripts -->
-    <script src="assets/js/header.js"></script>
-    <script src="assets/js/svg_btns.js"></script>
-    <script src="assets/js/short_logo.js"></script>
-    <script src="assets/js/download_btn.js"></script>
-    <script src="assets/js/time_calc.js"></script>
-    <script src="assets/js/animations.js"></script>
 </body>
 </html>

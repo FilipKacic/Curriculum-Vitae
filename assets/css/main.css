@@ -1,0 +1,111 @@
+:root {
+    --transparent-bg: rgba(0, 0, 0, 0.8);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, white, gainsboro);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: gainsboro;
+    opacity: 0.9;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+nav {
+    display: inline;
+}
+
+main {
+    padding: 0 5vw 10vh;
+}
+
+section {
+    padding: 1rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}   
+
+img {
+    margin: 1rem;
+    display: flex;
+    justify-self: center;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+footer {
+    padding: 10vh 5vw 0;
+}
+
+#logo, #signature {
+    margin: 0;
+    padding: 1rem;
+}
+
+#signature {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    color: cyan;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited {
+    color: purple;
+}
+
+.svg-btn {
+    height: 48px;
+    width: 48px;
+}
+
+a img {
+    transition: all 0.2s ease-in-out;
+}
+
+a img:hover {
+    scale: 1.2;
+    filter: invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+a img:active {
+    scale: 0.9;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
