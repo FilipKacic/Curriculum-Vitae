@@ -11,14 +11,12 @@
     --color-visited:  purple;
     --color-hover:    cyan;
     --color-active:   red;
-
     /* Sizes */
     --size-hairline:  1px;
     --size-outline:   3px;
     --size-icon:      48px;
     --size-space:     1rem;
     --size-more:      2rem;
-
     /* Durations */
     --duration-fast:  0.2s;
     --duration-blink: 0.3s;
@@ -109,8 +107,11 @@ nav a:active {
     text-decoration: none;
     transition: background-color var(--duration-fast) ease-in-out;
 }
+
 nav a:hover {
-    background-color: black;;
+    background-color: black;
+    text-decoration: none;
+    color: white;
 }
 
 /* ============================================================
@@ -129,21 +130,30 @@ nav a:hover {
     margin: var(--size-space) auto;
 }
 
-.svg-btn {
-    width: var(--size-icon);
-    height: var(--size-icon);
-    transition: scale var(--duration-fast) ease-in-out,
-                filter var(--duration-fast) ease-in-out;
-    margin: var(--size-space)
+.contact-links {
+    display: flex;
+    gap: var(--size-space);
 }
 
-.svg-btn:hover {
+.contact-links a {
+    transition: scale var(--duration-fast) ease-in-out,
+                filter var(--duration-fast) ease-in-out;
+}
+
+.contact-links a:hover {
     scale: 1.2;
     filter: invert(1) drop-shadow(0 0 var(--size-outline) var(--color-shadow));
 }
 
-.svg-btn:active {
+.contact-links a:active {
     scale: 0.9;
+}
+
+.svg-btn {
+    width: var(--size-icon);
+    height: var(--size-icon);
+    display: block;
+    margin: var(--size-space);
 }
 
 /* ============================================================
