@@ -1,108 +1,160 @@
+/* ============================================================
+   Variables
+   ============================================================ */
 :root {
-    --transparent-bg: rgba(0, 0, 0, 0.8);
+    /* Colors */
+    --color-shadow:   rgba(0, 0, 0, 0.8);
+    --color-light:    lightslategray;
+    --color-dark:     darkslategray;
+    --color-bg:       gainsboro;
+    --color-link:     blue;
+    --color-visited:  purple;
+    --color-hover:    cyan;
+    --color-active:   red;
+
+    /* Sizes */
+    --size-hairline:  1px;
+    --size-outline:   3px;
+    --size-icon:      48px;
+    --size-space:     1rem;
+    --size-more:      2rem;
+
+    /* Durations */
+    --duration-fast:  0.2s;
+    --duration-blink: 0.3s;
+    --duration-slow:  0.8s;
 }
 
+/* ============================================================
+   Base & Reset
+   ============================================================ */
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    background: linear-gradient(to bottom, white, gainsboro);
-}
-
-header {
-    position: sticky;
-    top: 0;
-    background-color: gainsboro;
-    opacity: 0.9;
-    transition: transform 0.3s ease-in-out;
-    z-index: 1000;
-    padding: 1rem;
-}
-
-nav {
-    display: inline;
-}
-
-main {
-    padding: 0 5vw 10vh;
-}
-
-section {
-    padding: 1rem;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-}   
-
-img {
-    margin: 1rem;
-    display: flex;
-    justify-self: center;
+    background: linear-gradient(to bottom, white, var(--color-bg));
 }
 
 hr {
-    margin: 1rem 0;
+    margin: var(--size-space) 0;
+}
+
+::selection {
+    background-color: var(--color-dark);
+    color: var(--color-bg);
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: var(--size-space);
+    background-color: var(--color-light);
+    opacity: 0.9;
+    transition: transform var(--duration-blink) ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--size-space);
+}
+
+main {
+    padding: 0 10vw;
+}
+
+section {
+    padding: var(--size-space);
 }
 
 footer {
-    padding: 10vh 5vw 0;
+    padding: 10vh 10vw;
 }
 
-#logo, #signature {
-    margin: 0;
-    padding: 1rem;
-}
-
-#signature {
-    text-align: right;
-}
-
+/* ============================================================
+   Links
+   ============================================================ */
 a {
+    color: var(--color-link);
     text-decoration: none;
-    color: blue;
+}
+
+a:visited {
+    color: var(--color-visited);
 }
 
 a:hover {
-    color: cyan;
+    color: var(--color-hover);
     text-decoration: underline;
 }
 
 a:active {
-    color: red;
+    color: var(--color-active);
 }
 
-a:visited {
-    color: purple;
+nav a,
+nav a:visited,
+nav a:hover,
+nav a:active {
+    border-radius: var(--size-space);
+    background-color: var(--color-dark);
+    color: white;
+    padding: var(--size-space);
+    text-decoration: none;
+    transition: background-color var(--duration-fast) ease-in-out;
+}
+nav a:hover {
+    background-color: black;;
+}
+
+/* ============================================================
+   Components
+   ============================================================ */
+#logo,
+#signature {
+    color: var(--color-dark);
+    margin: 0;
+    padding: var(--size-space);
+    text-align: center;
+}
+
+#portrait {
+    display: block;
+    margin: var(--size-space) auto;
 }
 
 .svg-btn {
-    height: 48px;
-    width: 48px;
+    width: var(--size-icon);
+    height: var(--size-icon);
+    transition: scale var(--duration-fast) ease-in-out,
+                filter var(--duration-fast) ease-in-out;
+    margin: var(--size-space)
 }
 
-a img {
-    transition: all 0.2s ease-in-out;
-}
-
-a img:hover {
+.svg-btn:hover {
     scale: 1.2;
-    filter: invert(1) drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+    filter: invert(1) drop-shadow(0 0 var(--size-outline) var(--color-shadow));
 }
 
-a img:active {
+.svg-btn:active {
     scale: 0.9;
 }
 
+/* ============================================================
+   Animations
+   ============================================================ */
 .section {
+    min-height: 50vh;
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+    transform: translateY(var(--size-icon));
+    transition: opacity var(--duration-slow) ease-out,
+                transform var(--duration-slow) ease-out;
 }
 
 .section.visible {
