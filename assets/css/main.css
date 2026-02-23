@@ -52,7 +52,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: var(--size-space);
+    padding: var(--size-space) var(--size-less) var(--size-less);
     background-color: var(--color-light);
     opacity: 0.9;
     transition: transform var(--duration-blink) ease-in-out;
@@ -110,6 +110,7 @@ nav a:active {
     text-decoration: none;
     transition: background-color var(--duration-fast) ease-in-out;
     font-weight: bold;
+    margin: 0 var(--size-less) var(--size-less);
 }
 
 nav a:hover {
@@ -125,8 +126,12 @@ nav a:hover {
 #signature {
     color: var(--color-dark);
     margin: 0;
-    padding: var(--size-space);
+    padding-bottom: var(--size-space);
     text-align: center;
+}
+
+#logo_alt {
+    display: none;
 }
 
 #portrait {
@@ -181,9 +186,27 @@ nav a:hover {
    Mobile adjustments
    ============================================================ */
 @media (max-width: 759px) {
+    #logo {
+        display: none;
+    }
+
+    #logo_alt {
+        display: block;
+        color: var(--color-dark);
+        margin: 0;
+        padding: var(--size-more) 0;
+        text-align: center;
+    }
+
     nav {
         flex-direction: column;
         align-items: stretch;
-        gap: var(--size-less);
+    }
+
+    nav a,
+    nav a:visited,
+    nav a:hover,
+    nav a:active {
+        padding: calc(var(--size-icon)/4) calc(var(--size-more)*2);
     }
 }
