@@ -15,6 +15,7 @@
     --size-hairline:  1px;
     --size-outline:   3px;
     --size-icon:      48px;
+    --size-less:      0.5rem;
     --size-space:     1rem;
     --size-more:      2rem;
     /* Durations */
@@ -59,8 +60,10 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
-    gap: var(--size-space);
+    justify-content:space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
 main {
@@ -103,9 +106,10 @@ nav a:active {
     border-radius: var(--size-space);
     background-color: var(--color-dark);
     color: white;
-    padding: var(--size-space);
+    padding: calc(var(--size-icon)/2) calc(var(--size-more)*2);
     text-decoration: none;
     transition: background-color var(--duration-fast) ease-in-out;
+    font-weight: bold;
 }
 
 nav a:hover {
@@ -127,11 +131,12 @@ nav a:hover {
 
 #portrait {
     display: block;
-    margin: var(--size-space) auto;
+    margin: var(--size-more) auto;
 }
 
 .contact-links {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--size-space);
 }
 
@@ -141,7 +146,7 @@ nav a:hover {
 }
 
 .contact-links a:hover {
-    scale: 1.2;
+    scale: 1.3;
     filter: invert(1) drop-shadow(0 0 var(--size-outline) var(--color-shadow));
 }
 
@@ -170,4 +175,15 @@ nav a:hover {
 .section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ============================================================
+   Mobile adjustments
+   ============================================================ */
+@media (max-width: 759px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--size-less);
+    }
 }
