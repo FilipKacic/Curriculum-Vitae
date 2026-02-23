@@ -106,7 +106,7 @@ nav a:active {
     border-radius: var(--size-space);
     background-color: var(--color-dark);
     color: white;
-    padding: calc(var(--size-icon)/2) calc(var(--size-more)*2);
+    padding: calc(var(--size-icon)/4) calc(var(--size-more)*1);
     text-decoration: none;
     transition: background-color var(--duration-fast) ease-in-out;
     font-weight: bold;
@@ -185,7 +185,7 @@ nav a:hover {
 /* ============================================================
    Mobile adjustments
    ============================================================ */
-@media (max-width: 759px) {
+@media (max-width: 759px)  {
     #logo {
         display: none;
     }
@@ -201,12 +201,5 @@ nav a:hover {
     nav {
         flex-direction: column;
         align-items: stretch;
-    }
-
-    nav a,
-    nav a:visited,
-    nav a:hover,
-    nav a:active {
-        padding: calc(var(--size-icon)/4) calc(var(--size-more)*2);
     }
 }
